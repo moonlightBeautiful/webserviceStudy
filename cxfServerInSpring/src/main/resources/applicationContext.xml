@@ -12,7 +12,7 @@
     <import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
 
     <!-- 自动扫描 -->
-    <context:component-scan base-package="cxfServerInvoke.java1234.webservice"/>
+    <context:component-scan base-package="com.java1234.webservice"/>
 
     <!-- 定义服务提供者和服务名  -->
     <jaxws:endpoint implementor="#helloWorld" address="/HelloWorld">

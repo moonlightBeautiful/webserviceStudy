@@ -1,0 +1,2 @@
+CXF_HOME    D:\apache-cxf-3.1.5
+Path        ;%CXF_HOME%\bin
