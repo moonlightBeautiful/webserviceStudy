@@ -1,4 +1,4 @@
-1.axis2发布方式:
+1.axis2发布方式：需要借助axis2.war。
     1.简单的pojo方式（无需配置）
         1.把axis2.war文件放到<Tomcat安装目录>\webapps目录中
             http://localhost:8080/axis2/
@@ -28,9 +28,12 @@
             wsdl文件的地址：
                 http://localhost:8080/项目名(axis2ServerInWebApp)，如果idea中没有配置，则不写/services/services
                     .xml中配置的服务名（HelloService）?wsdl
-            调用方法
+                    http://localhost:8080/services/HelloService?wsdl
+            调用方法：
                 http://localhost:8090/项目名(axis2ServerInWebApp)，如果idea中没有配置，则不写/services/services
                     .xml中配置的服务名（HelloService）/方法(sayHello)
+                    http://localhost:8090/services/HelloService/sayHello
                 http://localhost:8090/项目名(axis2ServerInWebApp)，如果idea中没有配置，则不写/services/services
                     .xml中配置的服务名（HelloService）/方法?键值对&键值对(sayHelloToPerson?name=gaoxu)
-   
+                    http://localhost:8090/services/HelloService/sayHelloToPerson?name=gaoxu
+                   

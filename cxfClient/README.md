@@ -6,6 +6,7 @@ cxf学习：
        2.需要服务器WSDL文件的url地址
              http://10.0.102.142/helloWorld?wsdl
        3.cmd生成客户端代码
+            打开cmd进入到一个目录执行下面命令
             wsdl2java http://ip地址/helloWorld?wsdl
        4.调用服务端方法
             

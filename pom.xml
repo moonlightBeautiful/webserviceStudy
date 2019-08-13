@@ -9,11 +9,15 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
+        <!-- cxf -->
         <module>cxfServer</module>
         <module>cxfClient</module>
         <module>cxfServerInSpring</module>
+        <!--axis -->
+        <module>axis1Client</module>
         <module>axis2ServerInWebApp</module>
-        <module>axisServerJar</module>
+        <module>axis2ServerJar</module>
+        <module>axis2Client</module>
     </modules>
 
     <name>webserviceStudy</name>
