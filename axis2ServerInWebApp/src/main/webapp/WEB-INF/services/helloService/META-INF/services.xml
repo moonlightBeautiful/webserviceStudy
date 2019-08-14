@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- http://localhost:8080/项目名/services/服务名?wsdl -->
 <serviceGroup>
-    <!-- 指定服务名,自定义 -->
+    <!-- 指定服务名,随便定义 -->
     <service name="HelloService">
         <!-- 服务的描述说明，可写可不写 -->
         <description>测试axis2ServerInWebApp发布</description>
-        <!-- 指定要发布的服务类 name固定ServiceClass-->
+        <!-- 指定要发布的服务类路径 自定义name-->
         <parameter name="ServiceClass">
             com.java1234.service.impl.HelloServiceImpl    <!-- 类路径 -->
         </parameter>
-        <!--<operation name="method">
+        <!-- 类里面的方法名name，若有多个方法，可以新增operation标签 -->
+        <!--
+        <operation name="method">
             <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
-        </operation>-->
+        </operation>
+        -->
         <!-- 服务级消息接收器 -->
         <messageReceivers>
             <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"

@@ -1,8 +1,8 @@
-1.axis2发布方式：需要借助axis2.war。
+1.axis2发布方式：
     1.简单的pojo方式（无需配置）
         1.把axis2.war文件放到<Tomcat安装目录>\webapps目录中
-            http://localhost:8080/axis2/
-            如果地址通，则OK
+            http://localhost:8080/services/listServices
+            如果地址通，则OK，但是我的集成没有通过，很奇怪，不过无所谓，我不看发布的全部服务了。
         2.把POJO类编译的class文件放到<Tomcat安装目录>\webapps\axis2\WEB-INF\pojo中（如果没有pojo目录，则建立该目录）
             POJO类不能使用package关键字声明包。
         3.启动tomcat
