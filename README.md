@@ -15,4 +15,20 @@ webService组件：
     
 编码：
     1.cxf（单独使用、在springWebApp中使用）发布服务，cxf（单独使用）调用服务
+        发布服务：2个参数
+            1.暴露接口的类
+            2.暴露接口的ip地址：String address = "http://localhost/helloWorld";
+        使用服务：
+            1.生成客户端代码
+            2.调用服务
     2.axis2（单独使用、在WebApp中使用，都需要用到axis2-web）发布服务，axis1和axis2调用服务
+        axis2发布服务
+            1.使用集成在webApp中方式
+        axis2使用服务
+            1.不用生成客户端代码，需要三个参数
+                 1.wsdl地址：targetEndpoint = "http://localhost:8099/services/HelloService?wsdl";
+                 2.命名空间：targetNamespace = "http://impl.service.java1234.com";
+                 3.方法名：method = "sayHello";
+        axis1使用服务：
+            1.生成客户端代码：如果发布的服务的方法名上抛出了异常，则可能会出错
+            2.调用

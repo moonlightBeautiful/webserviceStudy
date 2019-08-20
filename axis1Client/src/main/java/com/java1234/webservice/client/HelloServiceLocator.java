@@ -22,7 +22,8 @@ public class HelloServiceLocator extends org.apache.axis.client.Service implemen
     }
 
     // Use to get a proxy class for HelloServiceHttpSoap12Endpoint
-    private String HelloServiceHttpSoap12Endpoint_address = "http://localhost:8080/services/HelloService.HelloServiceHttpSoap12Endpoint/";
+    private String HelloServiceHttpSoap12Endpoint_address = "http://localhost:8099/services/HelloService" +
+            ".HelloServiceHttpSoap12Endpoint/";
 
     public String getHelloServiceHttpSoap12EndpointAddress() {
         return HelloServiceHttpSoap12Endpoint_address;
@@ -67,7 +68,8 @@ public class HelloServiceLocator extends org.apache.axis.client.Service implemen
 
 
     // Use to get a proxy class for HelloServiceHttpSoap11Endpoint
-    private String HelloServiceHttpSoap11Endpoint_address = "http://localhost:8080/services/HelloService.HelloServiceHttpSoap11Endpoint/";
+    private String HelloServiceHttpSoap11Endpoint_address = "http://localhost:8099/services/HelloService" +
+            ".HelloServiceHttpSoap11Endpoint/";
 
     public String getHelloServiceHttpSoap11EndpointAddress() {
         return HelloServiceHttpSoap11Endpoint_address;

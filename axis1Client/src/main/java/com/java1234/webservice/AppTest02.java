@@ -10,7 +10,7 @@ import java.net.URL;
  */
 public class AppTest02 {
     public static void main(String[] args) throws Exception {
-        // 关于天气的服务接口的调用
+        // 关于天气的服务接口的调用http://www.webxml.com.cn/WebServices/WeatherWS.asmx
         WeatherWSLocator locator = new WeatherWSLocator();
         //HelloServiceSoap11BindingStub和HelloServiceSoap12BindingStub 一样使用
         /*HelloServiceSoap12BindingStub stub =
@@ -19,6 +19,7 @@ public class AppTest02 {
         WeatherWSSoap12Stub stub =
                 new WeatherWSSoap12Stub(new URL(locator.getWeatherWSSoap12Address()), new
                         org.apache.axis.client.Service());
+        stub.setTimeout(1000000);
         for (String str : stub.getRegionCountry()) {
             System.out.println(str);
         }

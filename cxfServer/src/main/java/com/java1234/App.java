@@ -14,7 +14,7 @@ public class App {
         //暴露接口的类
         HelloWorldService helloWorldService = new HelloWorldServiceImpl();
         //暴露接口的ip地址
-        String address = "http://10.0.102.142/helloWorld";
+        String address = "http://localhost/helloWorld";
         //开始暴露webservice接口（需要jdk支持）
         Endpoint.publish(address, helloWorldService);
         /*JaxWsServerFactoryBean factoryBean = new JaxWsServerFactoryBean();
