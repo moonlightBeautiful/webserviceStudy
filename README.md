@@ -9,7 +9,7 @@ webService：
     WSDL(Web Services Description Language)是一个基于XML的语言，用于描述Web Service及其函数、参数和返回值。
     WSDL文件保存在Web服务器上，通过一个url地址就可以访问到它。客户端要调用一个WebService服务之前，要知道该服务的WSDL文件的地址。
     基于SOAP1.1生成的WSDL和基于SOAP1.2生成的WSDL也不一样：
-    
+    J2EE里面的stub是这样说的：为屏蔽客户调用远程主机上的对象，必须提供某种方式来模拟本地对象，这种本地对象称为存根(stub)，存根负责接收本地方法调用，并将它们委派给各自的具体实现对象。
 webService组件：
     cxf、axis1和axis2等
     
