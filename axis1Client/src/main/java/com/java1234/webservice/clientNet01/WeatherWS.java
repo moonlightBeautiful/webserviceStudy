@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
 public interface WeatherWS extends javax.xml.rpc.Service {
 
@@ -26,12 +26,12 @@ public interface WeatherWS extends javax.xml.rpc.Service {
  */
     public String getWeatherWSSoap12Address();
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap12() throws javax.xml.rpc.ServiceException;
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap12() throws javax.xml.rpc.ServiceException;
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap12(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap12(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
     public String getWeatherWSSoapAddress();
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap() throws javax.xml.rpc.ServiceException;
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap() throws javax.xml.rpc.ServiceException;
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException;
 }

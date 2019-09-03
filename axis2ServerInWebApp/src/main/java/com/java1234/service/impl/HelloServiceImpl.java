@@ -18,18 +18,17 @@ public class HelloServiceImpl implements HelloService {
     }
 
     @Override
-    public String sayHelloToPerson(String name){
+    public String sayHelloToPerson(String name) {
         System.out.println(new SimpleDateFormat("hh:mm:ss").format(new Date()));
         if (name == null || name.trim().equals("")) {
             name = "nobody";
         }
         try {
-            Thread.sleep(50000);
+            Thread.sleep(1000 * 60 * 5);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         System.out.println("hello" + name);
-        System.out.println(new SimpleDateFormat("hh:mm:ss").format(new Date()));
         return "hello," + name;
     }
 

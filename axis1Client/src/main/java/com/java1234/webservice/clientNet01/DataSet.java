@@ -1,20 +1,47 @@
 /**
- * GetRegionCountry.java
+ * DataSet.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class GetRegionCountry  implements java.io.Serializable {
-    public GetRegionCountry() {
+public class DataSet  implements java.io.Serializable, org.apache.axis.encoding.AnyContentType {
+    private org.apache.axis.message.MessageElement [] _any;
+
+    public DataSet() {
+    }
+
+    public DataSet(
+           org.apache.axis.message.MessageElement [] _any) {
+           this._any = _any;
+    }
+
+
+    /**
+     * Gets the _any value for this DataSet.
+     * 
+     * @return _any
+     */
+    public org.apache.axis.message.MessageElement [] get_any() {
+        return _any;
+    }
+
+
+    /**
+     * Sets the _any value for this DataSet.
+     * 
+     * @param _any
+     */
+    public void set_any(org.apache.axis.message.MessageElement [] _any) {
+        this._any = _any;
     }
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof GetRegionCountry)) return false;
-        GetRegionCountry other = (GetRegionCountry) obj;
+        if (!(obj instanceof DataSet)) return false;
+        DataSet other = (DataSet) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -22,7 +49,10 @@ public class GetRegionCountry  implements java.io.Serializable {
         }
         __equalsCalc = obj;
         boolean _equals;
-        _equals = true;
+        _equals = true && 
+            ((this._any==null && other.get_any()==null) || 
+             (this._any!=null &&
+              java.util.Arrays.equals(this._any, other.get_any())));
         __equalsCalc = null;
         return _equals;
     }
@@ -34,16 +64,27 @@ public class GetRegionCountry  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
+        if (get_any() != null) {
+            for (int i=0;
+                 i<java.lang.reflect.Array.getLength(get_any());
+                 i++) {
+                Object obj = java.lang.reflect.Array.get(get_any(), i);
+                if (obj != null &&
+                    !obj.getClass().isArray()) {
+                    _hashCode += obj.hashCode();
+                }
+            }
+        }
         __hashCodeCalc = false;
         return _hashCode;
     }
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetRegionCountry.class, true);
+        new org.apache.axis.description.TypeDesc(DataSet.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getRegionCountry"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">DataSet"));
     }
 
     /**

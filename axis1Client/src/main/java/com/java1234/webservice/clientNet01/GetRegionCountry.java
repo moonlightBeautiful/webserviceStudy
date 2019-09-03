@@ -1,20 +1,20 @@
 /**
- * GetRegionProvince.java
+ * GetRegionCountry.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class GetRegionProvince  implements java.io.Serializable {
-    public GetRegionProvince() {
+public class GetRegionCountry  implements java.io.Serializable {
+    public GetRegionCountry() {
     }
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof GetRegionProvince)) return false;
-        GetRegionProvince other = (GetRegionProvince) obj;
+        if (!(obj instanceof GetRegionCountry)) return false;
+        GetRegionCountry other = (GetRegionCountry) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -40,10 +40,10 @@ public class GetRegionProvince  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetRegionProvince.class, true);
+        new org.apache.axis.description.TypeDesc(GetRegionCountry.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getRegionProvince"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getRegionCountry"));
     }
 
     /**

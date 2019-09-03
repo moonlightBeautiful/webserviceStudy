@@ -1,47 +1,47 @@
 /**
- * DataSet.java
+ * GetWeatherResponse.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class DataSet  implements java.io.Serializable, org.apache.axis.encoding.AnyContentType {
-    private org.apache.axis.message.MessageElement [] _any;
+public class GetWeatherResponse  implements java.io.Serializable {
+    private String[] getWeatherResult;
 
-    public DataSet() {
+    public GetWeatherResponse() {
     }
 
-    public DataSet(
-           org.apache.axis.message.MessageElement [] _any) {
-           this._any = _any;
-    }
-
-
-    /**
-     * Gets the _any value for this DataSet.
-     * 
-     * @return _any
-     */
-    public org.apache.axis.message.MessageElement [] get_any() {
-        return _any;
+    public GetWeatherResponse(
+           String[] getWeatherResult) {
+           this.getWeatherResult = getWeatherResult;
     }
 
 
     /**
-     * Sets the _any value for this DataSet.
+     * Gets the getWeatherResult value for this GetWeatherResponse.
      * 
-     * @param _any
+     * @return getWeatherResult
      */
-    public void set_any(org.apache.axis.message.MessageElement [] _any) {
-        this._any = _any;
+    public String[] getGetWeatherResult() {
+        return getWeatherResult;
+    }
+
+
+    /**
+     * Sets the getWeatherResult value for this GetWeatherResponse.
+     * 
+     * @param getWeatherResult
+     */
+    public void setGetWeatherResult(String[] getWeatherResult) {
+        this.getWeatherResult = getWeatherResult;
     }
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof DataSet)) return false;
-        DataSet other = (DataSet) obj;
+        if (!(obj instanceof GetWeatherResponse)) return false;
+        GetWeatherResponse other = (GetWeatherResponse) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -50,9 +50,9 @@ public class DataSet  implements java.io.Serializable, org.apache.axis.encoding.
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this._any==null && other.get_any()==null) || 
-             (this._any!=null &&
-              java.util.Arrays.equals(this._any, other.get_any())));
+            ((this.getWeatherResult==null && other.getGetWeatherResult()==null) || 
+             (this.getWeatherResult!=null &&
+              java.util.Arrays.equals(this.getWeatherResult, other.getGetWeatherResult())));
         __equalsCalc = null;
         return _equals;
     }
@@ -64,11 +64,11 @@ public class DataSet  implements java.io.Serializable, org.apache.axis.encoding.
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (get_any() != null) {
+        if (getGetWeatherResult() != null) {
             for (int i=0;
-                 i<java.lang.reflect.Array.getLength(get_any());
+                 i<java.lang.reflect.Array.getLength(getGetWeatherResult());
                  i++) {
-                Object obj = java.lang.reflect.Array.get(get_any(), i);
+                Object obj = java.lang.reflect.Array.get(getGetWeatherResult(), i);
                 if (obj != null &&
                     !obj.getClass().isArray()) {
                     _hashCode += obj.hashCode();
@@ -81,10 +81,18 @@ public class DataSet  implements java.io.Serializable, org.apache.axis.encoding.
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(DataSet.class, true);
+        new org.apache.axis.description.TypeDesc(GetWeatherResponse.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">DataSet"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getWeatherResponse"));
+        org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
+        elemField.setFieldName("getWeatherResult");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "getWeatherResult"));
+        elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
+        elemField.setMinOccurs(0);
+        elemField.setNillable(false);
+        elemField.setItemQName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "string"));
+        typeDesc.addFieldDesc(elemField);
     }
 
     /**

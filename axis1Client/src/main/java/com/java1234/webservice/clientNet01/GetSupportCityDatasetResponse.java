@@ -5,16 +5,16 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
 public class GetSupportCityDatasetResponse  implements java.io.Serializable {
-    private com.java1234.webservice.clientTest02.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult;
+    private com.java1234.webservice.clientNet01.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult;
 
     public GetSupportCityDatasetResponse() {
     }
 
     public GetSupportCityDatasetResponse(
-           com.java1234.webservice.clientTest02.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult) {
+           com.java1234.webservice.clientNet01.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult) {
            this.getSupportCityDatasetResult = getSupportCityDatasetResult;
     }
 
@@ -24,7 +24,7 @@ public class GetSupportCityDatasetResponse  implements java.io.Serializable {
      * 
      * @return getSupportCityDatasetResult
      */
-    public com.java1234.webservice.clientTest02.GetSupportCityDatasetResponseGetSupportCityDatasetResult getGetSupportCityDatasetResult() {
+    public com.java1234.webservice.clientNet01.GetSupportCityDatasetResponseGetSupportCityDatasetResult getGetSupportCityDatasetResult() {
         return getSupportCityDatasetResult;
     }
 
@@ -34,7 +34,7 @@ public class GetSupportCityDatasetResponse  implements java.io.Serializable {
      * 
      * @param getSupportCityDatasetResult
      */
-    public void setGetSupportCityDatasetResult(com.java1234.webservice.clientTest02.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult) {
+    public void setGetSupportCityDatasetResult(com.java1234.webservice.clientNet01.GetSupportCityDatasetResponseGetSupportCityDatasetResult getSupportCityDatasetResult) {
         this.getSupportCityDatasetResult = getSupportCityDatasetResult;
     }
 

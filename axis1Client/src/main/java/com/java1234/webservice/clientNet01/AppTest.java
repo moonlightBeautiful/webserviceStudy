@@ -1,20 +1,20 @@
-package com.java1234.webservice;
+package com.java1234.webservice.clientNet01;
 
-import com.java1234.webservice.clientTest02.WeatherWSLocator;
-import com.java1234.webservice.clientTest02.WeatherWSSoap12Stub;
+import com.java1234.webservice.clientNet01.WeatherWSLocator;
+import com.java1234.webservice.clientNet01.WeatherWSSoap_BindingStub;
 
 import java.net.URL;
 
 /**
  * Hello world!
  */
-public class AppTest02 {
+public class AppTest {
     public static void main(String[] args) throws Exception {
         // 关于天气的服务接口的调用http://www.webxml.com.cn/WebServices/WeatherWS.asmx
         WeatherWSLocator locator = new WeatherWSLocator();
-        //HelloServiceSoap11BindingStub和HelloServiceSoap12BindingStub 一样使用
-        /*HelloServiceSoap12BindingStub stub =
-                new HelloServiceSoap12BindingStub(new URL(locator.getHelloServiceHttpSoap11EndpointAddress()), new
+        //***Soap_BindingStub和***Soap12Stub 都可以使用
+      /*  WeatherWSSoap_BindingStub stub =
+                new WeatherWSSoap_BindingStub(new URL(locator.getWeatherWSSoapAddress()), new
                         org.apache.axis.client.Service());*/
         WeatherWSSoap12Stub stub =
                 new WeatherWSSoap12Stub(new URL(locator.getWeatherWSSoap12Address()), new

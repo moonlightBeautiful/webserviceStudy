@@ -1,26 +1,26 @@
 /**
- * GetSupportCityDataset.java
+ * GetSupportCityString.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class GetSupportCityDataset  implements java.io.Serializable {
+public class GetSupportCityString  implements java.io.Serializable {
     private String theRegionCode;
 
-    public GetSupportCityDataset() {
+    public GetSupportCityString() {
     }
 
-    public GetSupportCityDataset(
+    public GetSupportCityString(
            String theRegionCode) {
            this.theRegionCode = theRegionCode;
     }
 
 
     /**
-     * Gets the theRegionCode value for this GetSupportCityDataset.
+     * Gets the theRegionCode value for this GetSupportCityString.
      * 
      * @return theRegionCode
      */
@@ -30,7 +30,7 @@ public class GetSupportCityDataset  implements java.io.Serializable {
 
 
     /**
-     * Sets the theRegionCode value for this GetSupportCityDataset.
+     * Sets the theRegionCode value for this GetSupportCityString.
      * 
      * @param theRegionCode
      */
@@ -40,8 +40,8 @@ public class GetSupportCityDataset  implements java.io.Serializable {
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof GetSupportCityDataset)) return false;
-        GetSupportCityDataset other = (GetSupportCityDataset) obj;
+        if (!(obj instanceof GetSupportCityString)) return false;
+        GetSupportCityString other = (GetSupportCityString) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -73,10 +73,10 @@ public class GetSupportCityDataset  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetSupportCityDataset.class, true);
+        new org.apache.axis.description.TypeDesc(GetSupportCityString.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getSupportCityDataset"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getSupportCityString"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
         elemField.setFieldName("theRegionCode");
         elemField.setXmlName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "theRegionCode"));

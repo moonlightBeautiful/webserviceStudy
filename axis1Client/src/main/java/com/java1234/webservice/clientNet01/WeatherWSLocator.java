@@ -5,7 +5,7 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
 public class WeatherWSLocator extends org.apache.axis.client.Service implements WeatherWS {
 
@@ -55,7 +55,7 @@ public class WeatherWSLocator extends org.apache.axis.client.Service implements 
         WeatherWSSoap12WSDDServiceName = name;
     }
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap12() throws javax.xml.rpc.ServiceException {
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap12() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(WeatherWSSoap12_address);
@@ -66,9 +66,9 @@ public class WeatherWSLocator extends org.apache.axis.client.Service implements 
         return getWeatherWSSoap12(endpoint);
     }
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap12(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap12(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            com.java1234.webservice.clientTest02.WeatherWSSoap12Stub _stub = new com.java1234.webservice.clientTest02.WeatherWSSoap12Stub(portAddress, this);
+            com.java1234.webservice.clientNet01.WeatherWSSoap12Stub _stub = new com.java1234.webservice.clientNet01.WeatherWSSoap12Stub(portAddress, this);
             _stub.setPortName(getWeatherWSSoap12WSDDServiceName());
             return _stub;
         }
@@ -100,7 +100,7 @@ public class WeatherWSLocator extends org.apache.axis.client.Service implements 
         WeatherWSSoapWSDDServiceName = name;
     }
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap() throws javax.xml.rpc.ServiceException {
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap() throws javax.xml.rpc.ServiceException {
        java.net.URL endpoint;
         try {
             endpoint = new java.net.URL(WeatherWSSoap_address);
@@ -111,9 +111,9 @@ public class WeatherWSLocator extends org.apache.axis.client.Service implements 
         return getWeatherWSSoap(endpoint);
     }
 
-    public com.java1234.webservice.clientTest02.WeatherWSSoap_PortType getWeatherWSSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
+    public com.java1234.webservice.clientNet01.WeatherWSSoap_PortType getWeatherWSSoap(java.net.URL portAddress) throws javax.xml.rpc.ServiceException {
         try {
-            com.java1234.webservice.clientTest02.WeatherWSSoap_BindingStub _stub = new com.java1234.webservice.clientTest02.WeatherWSSoap_BindingStub(portAddress, this);
+            com.java1234.webservice.clientNet01.WeatherWSSoap_BindingStub _stub = new com.java1234.webservice.clientNet01.WeatherWSSoap_BindingStub(portAddress, this);
             _stub.setPortName(getWeatherWSSoapWSDDServiceName());
             return _stub;
         }
@@ -135,13 +135,13 @@ public class WeatherWSLocator extends org.apache.axis.client.Service implements 
      */
     public java.rmi.Remote getPort(Class serviceEndpointInterface) throws javax.xml.rpc.ServiceException {
         try {
-            if (com.java1234.webservice.clientTest02.WeatherWSSoap_PortType.class.isAssignableFrom(serviceEndpointInterface)) {
-                com.java1234.webservice.clientTest02.WeatherWSSoap12Stub _stub = new com.java1234.webservice.clientTest02.WeatherWSSoap12Stub(new java.net.URL(WeatherWSSoap12_address), this);
+            if (com.java1234.webservice.clientNet01.WeatherWSSoap_PortType.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.java1234.webservice.clientNet01.WeatherWSSoap12Stub _stub = new com.java1234.webservice.clientNet01.WeatherWSSoap12Stub(new java.net.URL(WeatherWSSoap12_address), this);
                 _stub.setPortName(getWeatherWSSoap12WSDDServiceName());
                 return _stub;
             }
-            if (com.java1234.webservice.clientTest02.WeatherWSSoap_PortType.class.isAssignableFrom(serviceEndpointInterface)) {
-                com.java1234.webservice.clientTest02.WeatherWSSoap_BindingStub _stub = new com.java1234.webservice.clientTest02.WeatherWSSoap_BindingStub(new java.net.URL(WeatherWSSoap_address), this);
+            if (com.java1234.webservice.clientNet01.WeatherWSSoap_PortType.class.isAssignableFrom(serviceEndpointInterface)) {
+                com.java1234.webservice.clientNet01.WeatherWSSoap_BindingStub _stub = new com.java1234.webservice.clientNet01.WeatherWSSoap_BindingStub(new java.net.URL(WeatherWSSoap_address), this);
                 _stub.setPortName(getWeatherWSSoapWSDDServiceName());
                 return _stub;
             }

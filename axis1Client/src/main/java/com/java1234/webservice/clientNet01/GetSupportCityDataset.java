@@ -1,47 +1,47 @@
 /**
- * GetWeatherResponse.java
+ * GetSupportCityDataset.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class GetWeatherResponse  implements java.io.Serializable {
-    private String[] getWeatherResult;
+public class GetSupportCityDataset  implements java.io.Serializable {
+    private String theRegionCode;
 
-    public GetWeatherResponse() {
+    public GetSupportCityDataset() {
     }
 
-    public GetWeatherResponse(
-           String[] getWeatherResult) {
-           this.getWeatherResult = getWeatherResult;
-    }
-
-
-    /**
-     * Gets the getWeatherResult value for this GetWeatherResponse.
-     * 
-     * @return getWeatherResult
-     */
-    public String[] getGetWeatherResult() {
-        return getWeatherResult;
+    public GetSupportCityDataset(
+           String theRegionCode) {
+           this.theRegionCode = theRegionCode;
     }
 
 
     /**
-     * Sets the getWeatherResult value for this GetWeatherResponse.
+     * Gets the theRegionCode value for this GetSupportCityDataset.
      * 
-     * @param getWeatherResult
+     * @return theRegionCode
      */
-    public void setGetWeatherResult(String[] getWeatherResult) {
-        this.getWeatherResult = getWeatherResult;
+    public String getTheRegionCode() {
+        return theRegionCode;
+    }
+
+
+    /**
+     * Sets the theRegionCode value for this GetSupportCityDataset.
+     * 
+     * @param theRegionCode
+     */
+    public void setTheRegionCode(String theRegionCode) {
+        this.theRegionCode = theRegionCode;
     }
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof GetWeatherResponse)) return false;
-        GetWeatherResponse other = (GetWeatherResponse) obj;
+        if (!(obj instanceof GetSupportCityDataset)) return false;
+        GetSupportCityDataset other = (GetSupportCityDataset) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -50,9 +50,9 @@ public class GetWeatherResponse  implements java.io.Serializable {
         __equalsCalc = obj;
         boolean _equals;
         _equals = true && 
-            ((this.getWeatherResult==null && other.getGetWeatherResult()==null) || 
-             (this.getWeatherResult!=null &&
-              java.util.Arrays.equals(this.getWeatherResult, other.getGetWeatherResult())));
+            ((this.theRegionCode==null && other.getTheRegionCode()==null) || 
+             (this.theRegionCode!=null &&
+              this.theRegionCode.equals(other.getTheRegionCode())));
         __equalsCalc = null;
         return _equals;
     }
@@ -64,16 +64,8 @@ public class GetWeatherResponse  implements java.io.Serializable {
         }
         __hashCodeCalc = true;
         int _hashCode = 1;
-        if (getGetWeatherResult() != null) {
-            for (int i=0;
-                 i<java.lang.reflect.Array.getLength(getGetWeatherResult());
-                 i++) {
-                Object obj = java.lang.reflect.Array.get(getGetWeatherResult(), i);
-                if (obj != null &&
-                    !obj.getClass().isArray()) {
-                    _hashCode += obj.hashCode();
-                }
-            }
+        if (getTheRegionCode() != null) {
+            _hashCode += getTheRegionCode().hashCode();
         }
         __hashCodeCalc = false;
         return _hashCode;
@@ -81,17 +73,16 @@ public class GetWeatherResponse  implements java.io.Serializable {
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetWeatherResponse.class, true);
+        new org.apache.axis.description.TypeDesc(GetSupportCityDataset.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getWeatherResponse"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">getSupportCityDataset"));
         org.apache.axis.description.ElementDesc elemField = new org.apache.axis.description.ElementDesc();
-        elemField.setFieldName("getWeatherResult");
-        elemField.setXmlName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "getWeatherResult"));
+        elemField.setFieldName("theRegionCode");
+        elemField.setXmlName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "theRegionCode"));
         elemField.setXmlType(new javax.xml.namespace.QName("http://www.w3.org/2001/XMLSchema", "string"));
         elemField.setMinOccurs(0);
         elemField.setNillable(false);
-        elemField.setItemQName(new javax.xml.namespace.QName("http://WebXml.com.cn/", "string"));
         typeDesc.addFieldDesc(elemField);
     }
 

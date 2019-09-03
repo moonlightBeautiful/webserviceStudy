@@ -1,26 +1,26 @@
 /**
- * GetSupportCityDatasetResponseGetSupportCityDatasetResult.java
+ * GetRegionDatasetResponseGetRegionDatasetResult.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class GetSupportCityDatasetResponseGetSupportCityDatasetResult  implements java.io.Serializable, org.apache.axis.encoding.AnyContentType {
+public class GetRegionDatasetResponseGetRegionDatasetResult  implements java.io.Serializable, org.apache.axis.encoding.AnyContentType {
     private org.apache.axis.message.MessageElement [] _any;
 
-    public GetSupportCityDatasetResponseGetSupportCityDatasetResult() {
+    public GetRegionDatasetResponseGetRegionDatasetResult() {
     }
 
-    public GetSupportCityDatasetResponseGetSupportCityDatasetResult(
+    public GetRegionDatasetResponseGetRegionDatasetResult(
            org.apache.axis.message.MessageElement [] _any) {
            this._any = _any;
     }
 
 
     /**
-     * Gets the _any value for this GetSupportCityDatasetResponseGetSupportCityDatasetResult.
+     * Gets the _any value for this GetRegionDatasetResponseGetRegionDatasetResult.
      * 
      * @return _any
      */
@@ -30,7 +30,7 @@ public class GetSupportCityDatasetResponseGetSupportCityDatasetResult  implement
 
 
     /**
-     * Sets the _any value for this GetSupportCityDatasetResponseGetSupportCityDatasetResult.
+     * Sets the _any value for this GetRegionDatasetResponseGetRegionDatasetResult.
      * 
      * @param _any
      */
@@ -40,8 +40,8 @@ public class GetSupportCityDatasetResponseGetSupportCityDatasetResult  implement
 
     private Object __equalsCalc = null;
     public synchronized boolean equals(Object obj) {
-        if (!(obj instanceof GetSupportCityDatasetResponseGetSupportCityDatasetResult)) return false;
-        GetSupportCityDatasetResponseGetSupportCityDatasetResult other = (GetSupportCityDatasetResponseGetSupportCityDatasetResult) obj;
+        if (!(obj instanceof GetRegionDatasetResponseGetRegionDatasetResult)) return false;
+        GetRegionDatasetResponseGetRegionDatasetResult other = (GetRegionDatasetResponseGetRegionDatasetResult) obj;
         if (obj == null) return false;
         if (this == obj) return true;
         if (__equalsCalc != null) {
@@ -81,10 +81,10 @@ public class GetSupportCityDatasetResponseGetSupportCityDatasetResult  implement
 
     // Type metadata
     private static org.apache.axis.description.TypeDesc typeDesc =
-        new org.apache.axis.description.TypeDesc(GetSupportCityDatasetResponseGetSupportCityDatasetResult.class, true);
+        new org.apache.axis.description.TypeDesc(GetRegionDatasetResponseGetRegionDatasetResult.class, true);
 
     static {
-        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">>getSupportCityDatasetResponse>getSupportCityDatasetResult"));
+        typeDesc.setXmlType(new javax.xml.namespace.QName("http://WebXml.com.cn/", ">>getRegionDatasetResponse>getRegionDatasetResult"));
     }
 
     /**

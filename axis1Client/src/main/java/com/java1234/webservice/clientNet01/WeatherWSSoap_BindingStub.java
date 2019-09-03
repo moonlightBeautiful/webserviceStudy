@@ -5,9 +5,9 @@
  * by the Apache Axis 1.4 Apr 22, 2006 (06:55:48 PDT) WSDL2Java emitter.
  */
 
-package com.java1234.webservice.clientTest02;
+package com.java1234.webservice.clientNet01;
 
-public class WeatherWSSoap_BindingStub extends org.apache.axis.client.Stub implements com.java1234.webservice.clientTest02.WeatherWSSoap_PortType {
+public class WeatherWSSoap_BindingStub extends org.apache.axis.client.Stub implements com.java1234.webservice.clientNet01.WeatherWSSoap_PortType {
     private java.util.Vector cachedSerClasses = new java.util.Vector();
     private java.util.Vector cachedSerQNames = new java.util.Vector();
     private java.util.Vector cachedSerFactories = new java.util.Vector();
