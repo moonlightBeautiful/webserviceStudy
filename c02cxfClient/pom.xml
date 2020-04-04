@@ -2,30 +2,16 @@
 
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>webserviceStudy</artifactId>
+        <groupId>com.ims</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.ims</groupId>
-    <artifactId>webserviceStudy</artifactId>
-    <packaging>pom</packaging>
-    <version>1.0-SNAPSHOT</version>
-    <modules>
-        <!-- jdk -->
-        <module>c01jdkServer</module>
-        <module>c01jdkClient</module>
-        <!-- cxf -->
-        <module>c02cxfClient</module>
-        <module>c02cxfServer01InJarAndJetty</module>
-        <module>c02cxfServer02InSpringMvcAndTomcat</module>
-        <!--axis1.4 -->
-        <module>c03axis1.4Client</module>
-        <!--axis2 -->
-        <module>c04axis2ServerInWebAndTomcat</module>
-        <module>c04axis2Client01RPC</module>
-        <module>c04axis2Client02document</module>
-        <module>c04axis3Client01wsdl2java</module>
-    </modules>
+    <artifactId>c02cxfClient</artifactId>
 
-    <name>webserviceStudy</name>
+    <name>c02cxfClient</name>
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
 
@@ -36,7 +22,17 @@
     </properties>
 
     <dependencies>
-
+        <!-- cxf需要的jar包，2个。-->
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-core</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.cxf</groupId>
+            <artifactId>cxf-rt-frontend-jaxws</artifactId>
+            <version>3.1.5</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -76,6 +72,10 @@
                 <plugin>
                     <artifactId>maven-site-plugin</artifactId>
                     <version>3.7.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-project-info-reports-plugin</artifactId>
+                    <version>3.0.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>

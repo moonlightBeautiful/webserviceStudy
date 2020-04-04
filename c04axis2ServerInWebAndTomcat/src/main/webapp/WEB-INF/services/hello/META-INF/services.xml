@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- http://localhost:8080/项目名/services/服务名?wsdl -->
+<serviceGroup>
+    <!-- 指定服务名,随便定义,访问wsdl文件用到 http://localhost:8080/项目名/services/HelloService?wsdl -->
+    <service name="HelloService">
+        <!-- 服务的描述说明，可写可不写 -->
+        <description>测试axis2ServerInWebApp发布</description>
+        <!-- 指定要发布的服务类路径 ServiceClass为固定值-->
+        <parameter name="ServiceClass">com.ims.service.impl.HelloServiceImpl</parameter>
+        <!-- 指定发布的方法，若有多个方法，可以新增operation标签，不写则全部方法 -->
+        <!--
+        <operation name="method">
+            <messageReceiver class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+        </operation>
+        -->
+        <!-- 服务级消息接收器 -->
+        <messageReceivers>
+            <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+                             class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>
+            <messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+                             class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-only" class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver"/>
+            <messageReceiver mep="http://www.w3.org/ns/wsdl/in-out" class="org.apache.axis2.rpc.receivers.RPCMessageReceiver"/>    
+        </messageReceivers>
+
+</service>
+        </serviceGroup>
+
+
+
