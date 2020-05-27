@@ -8,9 +8,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>sayResponse complex typeçš„ Java ç±»ã€‚
+ * <p>sayResponse complex typeµÄ Java Àà¡£
  * 
- * <p>ä»¥ä¸‹æ¨¡å¼ç‰‡æ®µæŒ‡å®šåŒ…å«åœ¨æ­¤ç±»ä¸­çš„é¢„æœŸå†…å®¹ã€‚
+ * <p>ÒÔÏÂÄ£Ê½Æ¬¶ÎÖ¸¶¨°üº¬ÔÚ´ËÀàÖĞµÄÔ¤ÆÚÄÚÈİ¡£
  * 
  * <pre>
  * &lt;complexType name="sayResponse">
@@ -36,7 +36,7 @@ public class SayResponse {
     protected String _return;
 
     /**
-     * è·å–returnå±æ€§çš„å€¼ã€‚
+     * »ñÈ¡returnÊôĞÔµÄÖµ¡£
      * 
      * @return
      *     possible object is
@@ -48,7 +48,7 @@ public class SayResponse {
     }
 
     /**
-     * è®¾ç½®returnå±æ€§çš„å€¼ã€‚
+     * ÉèÖÃreturnÊôĞÔµÄÖµ¡£
      * 
      * @param value
      *     allowed object is

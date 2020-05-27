@@ -17,7 +17,8 @@ import java.util.List;
  */
 public class GetHeaderInterceptor extends AbstractPhaseInterceptor<SoapMessage> {
     public GetHeaderInterceptor() {
-        super(Phase.PRE_INVOKE);  // PRE_INVOKE:在调用方法之前调用自定拦截器
+        // PRE_INVOKE:在调用方法之前调用自定拦截器
+        super(Phase.PRE_INVOKE);
 
     }
 
@@ -25,7 +26,7 @@ public class GetHeaderInterceptor extends AbstractPhaseInterceptor<SoapMessage> 
     public void handleMessage(SoapMessage soapMessage) throws Fault {
         System.out.println("服务调用之前进行安全验证");
         List<Header> headers = soapMessage.getHeaders();
-        if (headers == null && headers.size() == 0) {
+        if (headers == null || headers.size() == 0) {
             throw new Fault(new IllegalArgumentException("没有Header，拦截器实施拦截"));
         }
         Header firstHeader = headers.get(0);

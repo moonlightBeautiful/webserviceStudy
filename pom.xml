@@ -3,7 +3,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>com.ims</groupId>
     <artifactId>webserviceStudy</artifactId>
     <packaging>pom</packaging>
@@ -19,10 +18,12 @@
         <!--axis1.4 -->
         <module>c03axis1.4Client</module>
         <!--axis2 -->
-        <module>c04axis2ServerInWebAndTomcat</module>
         <module>c04axis2Client01RPC</module>
         <module>c04axis2Client02document</module>
-        <module>c04axis3Client01wsdl2java</module>
+        <module>c04axis2Client03wsdl2java</module>
+        <module>c04axis2Server01InWebAndTomcat</module>
+        <module>c04axis2Server02InSpringMVCAndTomcat</module>
+
     </modules>
 
     <name>webserviceStudy</name>

@@ -13,17 +13,22 @@ import org.apache.cxf.phase.Phase;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
+/**
+ * @author Administrator
+ */
 public class AddHeaderInterceptor extends AbstractPhaseInterceptor<SoapMessage> {
 
     private String userName;
     private String password;
 
     public AddHeaderInterceptor(String userName, String password) {
-        super(Phase.PREPARE_SEND); // 准备发送SOAP消息的时候调用拦截器
+        // 鍑嗗鍙戦�丼OAP娑堟伅鐨勬椂鍊欒皟鐢ㄦ嫤鎴櫒
+        super(Phase.PREPARE_SEND);
         this.userName = userName;
         this.password = password;
     }
 
+    @Override
     public void handleMessage(SoapMessage message) throws Fault {
         List<Header> headerList = message.getHeaders();
 

@@ -6,7 +6,8 @@
     <welcome-file-list>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
-    <!-- AxisServlet对请求的拦截 -->
+
+    <!-- axis2配置 -->
     <servlet>
         <servlet-name>AxisServlet</servlet-name>
         <servlet-class>org.apache.axis2.transport.http.AxisServlet</servlet-class>

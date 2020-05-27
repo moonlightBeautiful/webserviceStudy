@@ -13,8 +13,9 @@ public class App {
         System.out.println("web webService start");
 
         HelloService helloService = new HelloServiceImpl();
-        String address = "http://192.168.1.33/service/helloService";
-        Endpoint.publish(address, helloService); // jdk实现 暴露webservice接口
+        String address = "http://192.168.1.3/service/helloService";
+        // jdk实现 暴露webservice接口
+        Endpoint.publish(address, helloService);
 
         System.out.println("web webService started");
     }

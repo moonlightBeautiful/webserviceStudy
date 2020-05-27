@@ -21,23 +21,19 @@ public class App {
         ServiceClient serviceClient = new ServiceClient();
         // 配置serviceClient选项
         Options options = new Options();
-        EndpointReference targetEPR = new EndpointReference("http://localhost:8080/c04axis2ServerInWebAndTomcat/services/HelloService?wsdl");
-        options.setTo(targetEPR);  // 指定调用WebService的URL
+        EndpointReference targetEPR = new EndpointReference("http://localhost:8080/c04axis2Server02InSpringMVCAndTomcat_war_exploded/services/HelloWorldService?wsdl");
+        // 指定调用WebService的URL
+        options.setTo(targetEPR);
         // 保存选项
         serviceClient.setOptions(options);
         // 命名空间
         OMFactory fac = OMAbstractFactory.getOMFactory();
-        OMNamespace omNs = fac.createOMNamespace("http://impl.service.ims.com", "sayHello");
-        OMElement method = fac.createOMElement("sayHello", omNs);
-        // 对应WebService的方法参数的节点
-        String[] strs = new String[]{"name"};
+        OMNamespace omNs = fac.createOMNamespace("http://impl.service.ims.com", "sayHiToUser");
+        OMElement method = fac.createOMElement("sayHiToUser", omNs);
         // 参数值
-        String[] val = new String[]{"admin"};
-        for (int i = 0; i < strs.length; i++) {
-            OMElement inner = fac.createOMElement(strs[i], omNs);
-            inner.setText(val[i]);
-            method.addChild(inner);
-        }
+        OMElement inner = fac.createOMElement("name", omNs);
+        inner.setText("admin");
+        method.addChild(inner) ;
         method.build();
         OMElement result = serviceClient.sendReceive(method);
         System.out.println(result.getFirstElement().getText());

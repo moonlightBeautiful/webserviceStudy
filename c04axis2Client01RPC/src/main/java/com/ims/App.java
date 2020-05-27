@@ -15,10 +15,10 @@ public class App {
     public static void main(String[] args) throws AxisFault {
         // 使用RPC方式调用WebService
         RPCServiceClient serviceClient = new RPCServiceClient();
-        // 配置serviceClient
+        // 配置serviceClient wsdl地址
         Options options = serviceClient.getOptions();
-        EndpointReference targetEPR = new EndpointReference("http://localhost:8080/c04axis2ServerInWebAndTomcat/services/HelloService?wsdl");
-        options.setTo(targetEPR);  // 指定调用WebService的URL
+        EndpointReference targetEPR = new EndpointReference("http://localhost:8080/c04axis2Server02InSpringMVCAndTomcat_war_exploded/services/HelloWorldService?wsdl");
+        options.setTo(targetEPR);
 
         /**
          * 调用方法一 (方法，入参)
@@ -34,17 +34,15 @@ public class App {
         /**
          * 调用方法二(方法，入参，返回类型)
          */
-        QName qname = new QName("http://impl.service.ims.com", "sayHelloToPerson");// 指定WSDL文件的命名空间和调用方法
-        Object[] parameters = new Object[]{"高旭"}; // 调用方法的入参
-        Class[] returnTypes = new Class[] { String.class }; // 调用方法的返回数据类型，Class对象
+        // WSDL文件的命名空间targetNamespace和调用方法
+        QName qname = new QName("http://impl.service.ims.com", "sayHiToUser");
+        // 调用方法的入参
+        Object[] parameters = new Object[]{"高旭"};
+        // 调用方法的返回数据类型，Class对象
+        Class[] returnTypes = new Class[] { String.class };
         Object[] response = serviceClient.invokeBlocking(qname, parameters, returnTypes);
         String r = (String) response[0];
         System.out.println(r);
 
-
-        /**
-         * RPCServiceClient继承于父类serviceClient对父类进行拓展，
-         * 我们可以直接拿着serviceClient进行操作实现我们的需求
-         */
     }
 }

@@ -18,17 +18,19 @@ import java.util.List;
 public class App {
     public static void main(String[] args) {
         HelloServiceService helloServiceService = new HelloServiceService();
-
         HelloService helloService = helloServiceService.getHelloServicePort();
-
         Client client = ClientProxy.getClient(helloService);
-        client.getInInterceptors().add(new LoggingInInterceptor()); // 内置in拦截器 日志拦截器
-        client.getOutInterceptors().add(new LoggingOutInterceptor()); // 内置out拦截器 日志拦截器
-        client.getOutInterceptors().add(new AddHeaderInterceptor("java1234","123456"));  //自定义拦截器
-        System.out.println(helloService.say("大爷"));
 
+        // 内置in拦截器 日志拦截器
+        client.getInInterceptors().add(new LoggingInInterceptor());
+        // 内置out拦截器 日志拦截器
+        client.getOutInterceptors().add(new LoggingOutInterceptor());
+        //自定义拦截器
+        client.getOutInterceptors().add(new AddHeaderInterceptor("java1234", "123456"));
+
+        System.out.println(helloService.say("大爷"));
         User user = new User();
-        user.setUserName("jack");
+        user.setUserName("zhangSan");
         user.setPassword("123456");
         List<Role> roleList = helloService.getRoleByUser(user);
         for (Role role : roleList) {

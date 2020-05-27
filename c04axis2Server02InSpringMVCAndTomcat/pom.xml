@@ -7,19 +7,47 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>c02cxfServer02InSpringMVC</artifactId>
+    <artifactId>c04axis2Server02InSpringMVCAndTomcat</artifactId>
     <packaging>war</packaging>
-    <name>c02cxfServer02InSpringMVC</name>
+    <name>c04axis2Server02InSpringMVCAndTomcat</name>
 
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.7</maven.compiler.source>
         <maven.compiler.target>1.7</maven.compiler.target>
+        <axis2.version>1.7.9</axis2.version>
     </properties>
 
     <dependencies>
-        <!-- 添加Spring 和 springMVC 支持 -->
+        <!--axis2需要的jar包 start↓-->
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-http</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-transport-local</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis2</groupId>
+            <artifactId>axis2-xmlbeans</artifactId>
+            <version>${axis2.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.axis</groupId>
+            <artifactId>axis-jaxrpc</artifactId>
+            <version>1.4</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <!--axis2需要的jar包 end↑-->
+        <!-- 添加Spring支持 start↓ -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-core</artifactId>
@@ -45,6 +73,8 @@
             <artifactId>spring-context-support</artifactId>
             <version>4.1.7.RELEASE</version>
         </dependency>
+        <!-- 添加Spring支持 end↑ -->
+        <!-- 添加Spring MVC支持 start↓ -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
@@ -55,53 +85,18 @@
             <artifactId>spring-webmvc</artifactId>
             <version>4.1.7.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aop</artifactId>
-            <version>4.1.7.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-aspects</artifactId>
-            <version>4.1.7.RELEASE</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
-            <version>4.1.7.RELEASE</version>
-        </dependency>
-        <!-- 添加cxf支持  -->
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-core</artifactId>
-            <version>3.1.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-frontend-jaxws</artifactId>
-            <version>3.1.5</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.cxf</groupId>
-            <artifactId>cxf-rt-transports-http</artifactId>
-            <version>3.1.5</version>
-        </dependency>
-        <!-- 如果使用tomcat，则不需要jetty   -->
-        <!-- <dependency>
-             <groupId>org.apache.cxf</groupId>
-             <artifactId>cxf-rt-transports-http-jetty</artifactId>
-             <version>3.1.5</version>
-         </dependency>-->
+        <!-- 添加Spring MVC支持 end↑ -->
     </dependencies>
 
     <build>
-        <finalName>c02cxfServer02InSpringMVC</finalName>
-        <pluginManagement>
+        <finalName>c04axis2Server02InSpringMVCAndTomcat</finalName>
+        <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
                 <plugin>
                     <artifactId>maven-clean-plugin</artifactId>
                     <version>3.1.0</version>
                 </plugin>
+                <!-- see http://maven.apache.org/ref/current/maven-core/default-bindings.html#Plugin_bindings_for_war_packaging -->
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>3.0.2</version>
